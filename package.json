@@ -22,6 +22,7 @@
     "10-pre": "webpack --config  10-wp-split-chunks/webpack.config.js",
     "10-server": "http-server 10-wp-split-chunks -p 3000",
     "11": "babel --config-file ./11-babel/babel.config.js 11-babel/index.js --out-dir 11-babel/dist",
+    "12": "babel --config-file ./12-babel-react/babel.config.js 12-babel-react/button.jsx --out-dir 12-babel-react/dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
