@@ -6,23 +6,31 @@
   "scripts": {
     "1": "http-server 01-plain-js -p 3000",
     "2": "node 02-common-js/index.js",
+    "2.5": "node 02-common-js/static-analysis-example.js",
     "3": "http-server 03-require-js -p 3000",
     "4": "http-server 04-esm -p 3000",
     "5": "http-server 05-esm-import-maps -p 3000",
     "6": "webpack --config  06-esm-webpack/webpack.config.js",
     "7": "http-server 07-esm-dynamic-imports -p 3000",
-    "8": "npm run 8-pre && npm run 8-server",
-    "9": "npm run 9-pre && npm run 9-server",
-    "10": "rm -rf 10-wp-split-chunks/dist/* && npm run 10-pre && npm run 10-server",
-    "2.5": "node 02-common-js/static-analysis-example.js",
+
     "8-pre": "webpack --config  08-wp-dynamic-imports/webpack.config.js",
     "8-server": "http-server 08-wp-dynamic-imports -p 3000",
+    "8": "npm run 8-pre && npm run 8-server",
+    
     "9-pre": "webpack --config  09-wp-modules/webpack.config.js",
     "9-server": "http-server 09-wp-modules -p 3000",
+    "9": "npm run 9-pre && npm run 9-server",
+
     "10-pre": "webpack --config  10-wp-split-chunks/webpack.config.js",
     "10-server": "http-server 10-wp-split-chunks -p 3000",
+    "10": "rm -rf 10-wp-split-chunks/dist/* && npm run 10-pre && npm run 10-server",
+
     "11": "babel --config-file ./11-babel/babel.config.js 11-babel/index.js --out-dir 11-babel/dist",
     "12": "babel --config-file ./12-babel-react/babel.config.js 12-babel-react/button.jsx --out-dir 12-babel-react/dist",
+
+    "13-pre": "webpack --config  13-all/webpack.config.js",
+    "13-server": "http-server 13-all -p 3000",
+    "13": "rm -rf 13-all/dist/* && npm run 13-pre && npm run 13-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -32,11 +40,14 @@
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.4",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
     "http-server": "^13.0.1",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
