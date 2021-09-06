@@ -9,4 +9,4 @@ import React from "https://esm.sh/react";
 // If import maps are supported
 // import React from 'react'
 
-// console.log(React);
+console.log(React);

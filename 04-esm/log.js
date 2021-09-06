@@ -1,9 +1,5 @@
-function _privateHelperFn(str) {
-  console.log("Hello", str);
-}
-
-function log(str) {
-  _privateHelperFn(str);
+function log() {
+  console.log("Hello from ES6 modules");
 }
 
 export default log;

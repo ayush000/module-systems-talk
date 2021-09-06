@@ -11,6 +11,10 @@ module.exports = {
 
   optimization: {
     splitChunks: {
+      // main -> import(module1) -> modulex
+      // main -> import(module2) -> modulex
+      // main -> import(module3) -> modulex
+      // main -> import(module4) -> modulex
       chunks: "async",
       minSize: 0,
     },

@@ -1,6 +1,6 @@
 import log from "./log.js";
 
-log("from ES6 modules");
+log();
 
 function handleClick() {
   import("./loadAsync.js").then((module) => {
